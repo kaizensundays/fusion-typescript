@@ -1,0 +1,109 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.kaizensundays.fusion</groupId>
+    <artifactId>fusion-ts</artifactId>
+    <version>0.0.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <java.version>1.8</java.version>
+        <kotlin.version>1.6.21</kotlin.version>
+        <spring.boot.version>2.2.13.RELEASE</spring.boot.version>
+        <log4j.version>2.17.2</log4j.version>
+        <babel.version>6.26.0</babel.version>
+        <react.version>17.0.2</react.version>
+        <react-types.version>17.0.5</react-types.version>
+    </properties>
+
+    <modules>
+        <module>fusion-ts-alpha</module>
+        <module>fusion-ts-lib</module>
+    </modules>
+
+    <dependencies>
+
+        <!-- WebJars -->
+        <dependency>
+            <groupId>org.webjars</groupId>
+            <artifactId>typescript</artifactId>
+            <version>1.7.5</version>
+        </dependency>
+        <dependency>
+            <groupId>org.webjars.npm</groupId>
+            <artifactId>babel-standalone</artifactId>
+            <version>${babel.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.webjars.npm</groupId>
+            <artifactId>react</artifactId>
+            <version>${react.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.webjars.npm</groupId>
+            <artifactId>react-dom</artifactId>
+            <version>${react.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.webjars.npm</groupId>
+            <artifactId>loose-envify</artifactId>
+            <version>1.4.0</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>*</groupId>
+                    <artifactId>*</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.webjars.npm</groupId>
+            <artifactId>js-tokens</artifactId>
+            <version>4.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.webjars.npm</groupId>
+            <artifactId>scheduler</artifactId>
+            <version>0.21.0</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>*</groupId>
+                    <artifactId>*</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.webjars.npm</groupId>
+            <artifactId>object-assign</artifactId>
+            <version>4.1.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.webjars.npm</groupId>
+            <artifactId>types__react</artifactId>
+            <version>${react-types.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.webjars.npm</groupId>
+            <artifactId>types__react-dom</artifactId>
+            <version>17.0.9</version>
+        </dependency>
+        <dependency>
+            <groupId>org.webjars.npm</groupId>
+            <artifactId>types__prop-types</artifactId>
+            <version>15.7.5</version>
+        </dependency>
+        <dependency>
+            <groupId>org.webjars.npm</groupId>
+            <artifactId>types__scheduler</artifactId>
+            <version>0.16.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.webjars.npm</groupId>
+            <artifactId>csstype</artifactId>
+            <version>3.1.1</version>
+        </dependency>
+
+    </dependencies>
+
+</project>
